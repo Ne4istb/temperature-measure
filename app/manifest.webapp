@@ -1,0 +1,29 @@
+{
+  "version": "1.0.0",
+  "name": "Temperature Measure",
+  "launch_path": "/index.html",
+  "description": "Small PWA for creating graphs base on time and temperature.",
+  "icons": {
+    "128": "/images/touch/icon-128x128.png"
+  },
+  "developer": {
+    "name": "Ne4istb",
+    "url": ""
+  },
+  "installs_allowed_from": [
+    "*"
+  ],
+  "default_locale": "ru",
+  "permissions": {
+  },
+  "locales": {
+    "en": {
+      "name": "Temperature Measure",
+      "description": "Small PWA for creating graphs base on time and temperature."
+    },
+    "ru": {
+      "name": "Измерение температуры",
+      "description": "Маленькое веб-приложение для построения графиков на основании температуры и времени."
+    }
+  }
+}
