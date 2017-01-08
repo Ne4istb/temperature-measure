@@ -68,6 +68,8 @@
             this._initTemperatureInput();
             this._initDateDialog();
             this._initTimeDialog();
+    
+            this._resetForm();
         }
         
         show(){
@@ -111,7 +113,7 @@
             let time = moment()
                 .set('year', this._selectedDate.get('year'))
                 .set('month', this._selectedDate.get('month'))
-                .set('day', this._selectedDate.get('day'))
+                .set('date', this._selectedDate.get('date'))
                 .set('hour', this._selectedTime.get('hour'))
                 .set('minute', this._selectedTime.get('minute'));
     
@@ -145,6 +147,7 @@
             
             this._dateLabel = document.querySelector('#date span');
             dateDialog.trigger = this._dateLabel;
+    
             this._dateLabel.addEventListener('onOk', () => {
                 this._dateLabel.textContent = dateDialog.time.format('DD.MM.YYYY');
                 this._selectedDate = dateDialog.time;
@@ -240,6 +243,12 @@
                                 displayFormats: {
                                     quarter: 'MMM YYYY hh:mm'
                                 }
+                            }
+                        }],
+                        yAxes: [{
+                            ticks: {
+                                max: 42,
+                                min: 35
                             }
                         }]
                     }
